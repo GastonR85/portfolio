@@ -13,3 +13,30 @@
     font-size: 2.5rem;
     margin-bottom: 35px;
 }
+
+%hover{
+    position: absolute;
+    background-color: $color-secondary;
+    opacity: 80%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /*Para centrarlo horizontalmente*/
+    justify-content: center;
+    transform: scale(0%,0%);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out
+}
+
+%grid-proy{
+    height: 550px;
+    display: grid;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap:10px;
+}

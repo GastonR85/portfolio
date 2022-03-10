@@ -13,7 +13,7 @@
                 nav{
                     @include flex(flex-end,center);
                     height: 70px;
-                    font-weight:700;
+                    font-weight:map-get($ft-w, thick);
                         .nav-item{
                             color: white;
                             text-decoration: none;
@@ -39,7 +39,7 @@
                 }
                 .hero-subtitle{
                     font-size: 2rem;
-                    font-weight: 300;
+                    font-weight: map-get($ft-w, normal);
                     margin: 15px 0;
                 }
                 .cta-hero{

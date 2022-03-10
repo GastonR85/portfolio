@@ -16,8 +16,8 @@ main{
             }
             .cta-presentation{
                 display: inline-block; /*Para desbloquear propiedades del moldeado de cajas*/
-                background-color:var(--color-primary);
-                padding: var(--boton-padding);
+                background-color:$color-primary;
+                padding: $boton-padding;
                 margin-top: 30px;
                 color: #fff;
                 text-decoration: none;

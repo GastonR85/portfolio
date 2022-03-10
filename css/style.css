@@ -21,6 +21,32 @@
   margin-bottom: 35px;
 }
 
+.project .project-grid .project-item .project-hover {
+  position: absolute;
+  background-color: #764ba2;
+  opacity: 80%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /*Para centrarlo horizontalmente*/
+  justify-content: center;
+  transform: scale(0%, 0%);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project .project-grid {
+  height: 550px;
+  display: grid;
+  grid-template-areas: "img1 img1 img2 img3" "img1 img1 img4 img5";
+  gap: 10px;
+}
+
 /*Estilos Globales*/
 body {
   font-family: "Raleway", sans-serif;
@@ -80,7 +106,7 @@ body {
 }
 .hero .hero-container .hero-text .hero-subtitle {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 500;
   margin: 15px 0;
 }
 .hero .hero-container .hero-text .cta-hero {
@@ -124,8 +150,8 @@ main .presentation .presentation-copy {
 main .presentation .cta-presentation {
   display: inline-block;
   /*Para desbloquear propiedades del moldeado de cajas*/
-  background-color: var(--color-primary);
-  padding: var(--boton-padding);
+  background-color: #667eea;
+  padding: 20px 40px;
   margin-top: 30px;
   color: #fff;
   text-decoration: none;
@@ -160,12 +186,6 @@ main .about .tx-left {
 .project {
   background-color: #f2f2f2;
 }
-.project .project-grid {
-  display: grid;
-  height: 550px;
-  grid-template-areas: "img1 img1 img2 img3" "img1 img1 img4 img5";
-  gap: 10px;
-}
 .project .project-grid .project-item {
   position: relative;
   width: 100%;
@@ -192,6 +212,10 @@ main .about .tx-left {
 }
 .project .project-grid .project-item:nth-of-type(5) {
   grid-area: img5;
+}
+
+.project-item:hover .project-hover {
+  transform: scale(100%, 100%);
 }
 
 /*Opiniones*/
