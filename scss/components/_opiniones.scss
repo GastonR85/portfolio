@@ -1,0 +1,46 @@
+.review{
+    .review-grid{
+        width: 100%; /*Para que ocupe todo el tamaño de la pantalla*/
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+            .review-item{
+                width: 95%; /*Esto lo que hara es ocupar el 95% de la fraccion*/
+                margin: 0 auto; /*Centramos el contenido*/
+                background-color: $color-secondary;
+                box-shadow: 0 8px 10px rgba(66,66,66,.5);
+                border-radius: 7px;
+                padding: 30px 25px;
+                color: #fff;
+                margin-bottom: 50px; 
+                    .review-person{
+                        display: flex;
+                        align-items: center; /*Alineacion vertical*/
+                        margin-bottom: 20px;
+                            .review-img{
+                                width: 100px;
+                                min-width:100px;
+                                height: 100px;
+                                object-fit: cover;
+                                object-position: top;
+                                border-radius: 50%;
+                                border: 3px solid #fff;
+                                margin-right: 30px;
+                            }
+                            .review-data{
+                                .review-name{
+                                    font-size: 1.5rem;
+                                    margin-bottom: 10px;
+                                }
+                                .review-job{
+                                    color: #e0afa0;
+                                    font-weight: 700;
+                                }
+                            }
+                    }
+                    .review-text{
+                        font-weight: 300;
+                    }
+            }
+    }
+}

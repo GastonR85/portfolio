@@ -1,0 +1,62 @@
+
+
+.hero{
+    height: 100vh; /*Va a ocupar el 100% de la altura de navegador*/
+    background-image: $bg-gradient, url('../img/hero.jpg');
+    background-repeat: no-repeat; /*Par que no se repita la imagen*/
+    background-size: cover; /*para que abarque el 100% */
+    background-attachment: fixed; /*Efecto paralax*/
+    background-position: center; /*Para centrarlo*/
+    position: relative; /*Para posicionar la wave*/
+        .container{
+            padding: 0;
+                nav{
+                    @include flex(flex-end,center);
+                    height: 70px;
+                    font-weight:700;
+                        .nav-item{
+                            color: white;
+                            text-decoration: none;
+                            margin-right: 20px;
+                            padding: 10px 15px;
+                            font-weight: inherit; /*Hereda la fuente del padre*/
+                        }
+                        .cta-item{
+                            border: 1px solid white; 
+                        }
+                }
+        }
+        .hero-container{
+            display: flex;
+            height: calc(100vh - 70px); /*Es la altura total del header menos 70px que ocupa el nav*/
+            align-items: center; /*Centrado vertical*/
+            color: white;
+            .hero-text{
+                width: 80%;
+                margin-bottom: 50px;
+                .hero-title{
+                    font-size: 3.2rem;
+                }
+                .hero-subtitle{
+                    font-size: 2rem;
+                    font-weight: 300;
+                    margin: 15px 0;
+                }
+                .cta-hero{
+                    display: inline-block; /*Para desbloquear propiedades del moldeado de cajas*/
+                    background-color: #fff;
+                    padding: $boton-padding;
+                    color: $color-primary;
+                    text-decoration: none;
+                    border-radius: 40px;
+                }
+            }
+        }
+        .hero-wave{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+        }
+}

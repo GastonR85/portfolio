@@ -1,0 +1,50 @@
+main{
+    .presentation{
+        padding-top: 0; /* tenemos la separacion de 100px de la wave*/
+        text-align: center;
+            .presentation-img{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                object-fit: cover; /*Para que la imagen no pierda resolucion*/
+                object-position: top; /*Para que la perspectiva sea de arriba*/
+            }
+            .presentation-copy{
+                width: 80%;
+                margin: 0 auto; /*Para centrar el contenido del texto*/
+            }
+            .cta-presentation{
+                display: inline-block; /*Para desbloquear propiedades del moldeado de cajas*/
+                background-color:var(--color-primary);
+                padding: var(--boton-padding);
+                margin-top: 30px;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 40px;
+            }
+    }
+    .about{
+        min-height: 400px;
+        display: grid;
+        /*Definimos dos columnas*/
+        grid-template-columns: 1fr 1fr;
+        row-gap: 80px; /*Espaciado entre filas*/
+        justify-items: center;
+        align-items: center;
+            .about-paragraph{
+                margin-bottom: 20px;
+                line-height: 1.5;
+                font-weight: 300;    
+            }
+            .about-img{
+                text-align: center;
+                .about-picture{
+                    max-width: 80%;
+                }
+            }
+            .tx-left{
+                text-align: left;
+            }
+        }          
+}

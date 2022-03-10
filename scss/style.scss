@@ -1,0 +1,33 @@
+/*Inicializacion*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import "../scss/base/variables";
+@import "../scss/base/extends";
+@import "../scss/base/mixins";
+
+/*Estilos Globales*/
+body{
+    font-family:$ft-family;
+}
+.container{
+    @extend %gral-cont;
+}
+.subtitle{
+    @extend %gral-sub;
+}
+
+/*Header*/
+@import '../scss/components/header';
+/*main*/
+@import '../scss/components/main';
+/*Project*/
+@import '../scss/components/project';
+/*Opiniones*/
+@import '../scss/components/opiniones';
+/*Footer*/
+@import '../scss/components/footer';
+

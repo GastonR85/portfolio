@@ -1,0 +1,49 @@
+.footer{
+    background-color:$color-primary;
+    .footer-grid{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+            .nav-footer{
+                @include flex(center,center);
+                gap: 20px;
+                    .nav-item{
+                        color: white;
+                        text-decoration: none;
+                        margin-right: 20px;
+                        padding: 10px 15px;
+                        font-weight: inherit; /*Hereda la fuente del padre*/
+                    }
+            }
+            .footer-contact{
+                .footer-title{
+                    font-weight: 400;
+                    color: #fff;
+                    font-size: 2rem;
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+                .container-icons{
+                    display: flex;
+                    justify-content: space-evenly;
+                        .icon-item{
+                            display: inline-block;
+                            width: 60px;
+                            height: 60px;
+                            color: #fff;
+                            text-align: center;
+                            border: 1px solid #fff;
+                            border-radius: 50%;
+                                .icon-footer{
+                                    color: inherit;
+                                    font-size: 30px;
+                                    text-decoration: none;
+                                } 
+                                .fa-brands.icon-footer{
+                                    line-height: 60px;
+                                }
+
+                        }
+                }     
+            }
+    }  
+}

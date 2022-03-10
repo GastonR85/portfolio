@@ -1,3 +1,296 @@
+@charset "UTF-8";
+/*Inicializacion*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  /*Esto nos permite que todo lo que salga de este 90% de oculte*/
+  padding: 80px 0;
+}
+
+.subtitle {
+  color: #667eea;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+}
+
+/*Estilos Globales*/
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/*Header*/
+.hero {
+  height: 100vh;
+  /*Va a ocupar el 100% de la altura de navegador*/
+  background-image: linear-gradient(135deg, hwb(229 40% 8%/0.494) 0%, #764ba298 100%), url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  /*Par que no se repita la imagen*/
+  background-size: cover;
+  /*para que abarque el 100% */
+  background-attachment: fixed;
+  /*Efecto paralax*/
+  background-position: center;
+  /*Para centrarlo*/
+  position: relative;
+  /*Para posicionar la wave*/
+}
+.hero .container {
+  padding: 0;
+}
+.hero .container nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  font-weight: 700;
+}
+.hero .container nav .nav-item {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px 15px;
+  font-weight: inherit;
+  /*Hereda la fuente del padre*/
+}
+.hero .container nav .cta-item {
+  border: 1px solid white;
+}
+.hero .hero-container {
+  display: flex;
+  height: calc(100vh - 70px);
+  /*Es la altura total del header menos 70px que ocupa el nav*/
+  align-items: center;
+  /*Centrado vertical*/
+  color: white;
+}
+.hero .hero-container .hero-text {
+  width: 80%;
+  margin-bottom: 50px;
+}
+.hero .hero-container .hero-text .hero-title {
+  font-size: 3.2rem;
+}
+.hero .hero-container .hero-text .hero-subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 15px 0;
+}
+.hero .hero-container .hero-text .cta-hero {
+  display: inline-block;
+  /*Para desbloquear propiedades del moldeado de cajas*/
+  background-color: #fff;
+  padding: 20px 40px;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 40px;
+}
+.hero .hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+/*main*/
+main .presentation {
+  padding-top: 0;
+  /* tenemos la separacion de 100px de la wave*/
+  text-align: center;
+}
+main .presentation .presentation-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  /*Para que la imagen no pierda resolucion*/
+  object-position: top;
+  /*Para que la perspectiva sea de arriba*/
+}
+main .presentation .presentation-copy {
+  width: 80%;
+  margin: 0 auto;
+  /*Para centrar el contenido del texto*/
+}
+main .presentation .cta-presentation {
+  display: inline-block;
+  /*Para desbloquear propiedades del moldeado de cajas*/
+  background-color: var(--color-primary);
+  padding: var(--boton-padding);
+  margin-top: 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+}
+main .about {
+  min-height: 400px;
+  display: grid;
+  /*Definimos dos columnas*/
+  grid-template-columns: 1fr 1fr;
+  row-gap: 80px;
+  /*Espaciado entre filas*/
+  justify-items: center;
+  align-items: center;
+}
+main .about .about-paragraph {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+main .about .about-img {
+  text-align: center;
+}
+main .about .about-img .about-picture {
+  max-width: 80%;
+}
+main .about .tx-left {
+  text-align: left;
+}
+
+/*Project*/
+.project {
+  background-color: #f2f2f2;
+}
+.project .project-grid {
+  display: grid;
+  height: 550px;
+  grid-template-areas: "img1 img1 img2 img3" "img1 img1 img4 img5";
+  gap: 10px;
+}
+.project .project-grid .project-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.project .project-grid .project-item .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.project .project-grid .project-item:nth-of-type(1) {
+  grid-area: img1;
+}
+.project .project-grid .project-item:nth-of-type(2) {
+  grid-area: img2;
+}
+.project .project-grid .project-item:nth-of-type(3) {
+  grid-area: img3;
+}
+.project .project-grid .project-item:nth-of-type(4) {
+  grid-area: img4;
+}
+.project .project-grid .project-item:nth-of-type(5) {
+  grid-area: img5;
+}
+
+/*Opiniones*/
+.review .review-grid {
+  width: 100%;
+  /*Para que ocupe todo el tamaño de la pantalla*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.review .review-grid .review-item {
+  width: 95%;
+  /*Esto lo que hara es ocupar el 95% de la fraccion*/
+  margin: 0 auto;
+  /*Centramos el contenido*/
+  background-color: #764ba2;
+  box-shadow: 0 8px 10px rgba(66, 66, 66, 0.5);
+  border-radius: 7px;
+  padding: 30px 25px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.review .review-grid .review-item .review-person {
+  display: flex;
+  align-items: center;
+  /*Alineacion vertical*/
+  margin-bottom: 20px;
+}
+.review .review-grid .review-item .review-person .review-img {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-right: 30px;
+}
+.review .review-grid .review-item .review-person .review-data .review-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.review .review-grid .review-item .review-person .review-data .review-job {
+  color: #e0afa0;
+  font-weight: 700;
+}
+.review .review-grid .review-item .review-text {
+  font-weight: 300;
+}
+
+/*Footer*/
+.footer {
+  background-color: #667eea;
+}
+.footer .footer-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+.footer .footer-grid .nav-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer .footer-grid .nav-footer .nav-item {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px 15px;
+  font-weight: inherit;
+  /*Hereda la fuente del padre*/
+}
+.footer .footer-grid .footer-contact .footer-title {
+  font-weight: 400;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.footer .footer-grid .footer-contact .container-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .footer-grid .footer-contact .container-icons .icon-item {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.footer .footer-grid .footer-contact .container-icons .icon-item .icon-footer {
+  color: inherit;
+  font-size: 30px;
+  text-decoration: none;
+}
+.footer .footer-grid .footer-contact .container-icons .icon-item .fa-brands.icon-footer {
+  line-height: 60px;
+}
 
 /*# sourceMappingURL=style.css.map */
